@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="random color.css">
+</head>
+<body>
+    
+    <div class="color">
+        <span id="hex">#a83432</span>
+        <button onclick="changeColor()">Click here</button>
+    </div>
+
+
+<!-- javascript function to generate random color -->
+    <script>
+        function changeColor() {
+            var colors = "0123456789ABCDEF"
+            var symbol = '#'
+            for(var i=0; i<6; i++) {
+                 symbol = symbol + colors[Math.floor(Math.random() * 16)];
+
+            }
+            document.body.style.background = symbol;
+            document.getElementById("hex").innerHTML = symbol
+        }
+        
+    </script>
+</body>
+</html>
