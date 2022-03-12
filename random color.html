@@ -10,22 +10,24 @@
     
     <div class="color">
         <span id="hex">#a83432</span>
-        <button onclick="changeColor()">Click here</button>
+        <button onclick="generateColor()">Click here</button>
     </div>
 
 
 <!-- javascript function to generate random color -->
     <script>
-        function changeColor() {
-            var colors = "0123456789ABCDEF"
-            var symbol = '#'
-            for(var i=0; i<6; i++) {
-                 symbol = symbol + colors[Math.floor(Math.random() * 16)];
+       function generateColor() {
+           var color = "#"
+           var symbols = "0123456789ABCDEF"
+           for(var i=0; i<6; i++) {
+            color = color + symbols[Math.floor(Math.random() * 16)]
 
-            }
-            document.body.style.background = symbol;
-            document.getElementById("hex").innerHTML = symbol
-        }
+           }
+           document.body.style.background = color
+           document.getElementById("hex").innerHTML = color
+
+           
+       }
         
     </script>
 </body>
